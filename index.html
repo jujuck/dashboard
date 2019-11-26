@@ -149,6 +149,7 @@
     font-size: 6rem;
     letter-spacing: .05em;
     cursor: pointer;
+    text-align: center;
   }
 
   #search-form {
@@ -426,10 +427,10 @@
 
     _setTime() {
       const date = new Date();
-      const year = this._pad(date.getFullYear());
-      const today = this._pad(date.getDate());
+      const year = date.getFullYear();
+      const today = date.getDate();
       const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-      const day = this._pad(date.getDay());
+      const day = date.getDay();
       const hours = this._pad(date.getHours());
       const minutes = this._pad(date.getMinutes());
       this._el.innerHTML = today + " " + weekday[day] + " " + year + "<br>" + hours + this._delimiter + minutes;
