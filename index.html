@@ -431,11 +431,11 @@
       const today = date.getDate();
       const weekday = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
       const day = date.getDay();
-      const allMonth = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"];
+      const allMonth = ["Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre", "Janvier"];
       const month = date.getMonth();
       const hours = this._pad(date.getHours());
       const minutes = this._pad(date.getMinutes());
-      this._el.innerHTML =  weekday[day] + " " + today + " " + month + " " + year + "<br>" + hours + this._delimiter + minutes;
+      this._el.innerHTML =  weekday[day] + " " + today + " " + allMonth[month] + " " + year + "<br>" + hours + this._delimiter + minutes;
     }
 
     _start() {
