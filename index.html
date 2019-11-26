@@ -439,7 +439,7 @@
       const day = this._pad(date.getDay());
       const hours = this._pad(date.getHours());
       const minutes = this._pad(date.getMinutes());
-      this._el.innerHTML = today + " " + day + " " + year + "<br>" + hours + this._delimiter + minutes;
+      this._el.innerHTML = today + " " + weekday[day] + " " + year + "<br>" + hours + this._delimiter + minutes;
     }
 
     _start() {
