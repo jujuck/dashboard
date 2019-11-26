@@ -426,9 +426,10 @@
 
     _setTime() {
       const date = new Date();
+      const day = this._pad(date.getDays());
       const hours = this._pad(date.getHours());
       const minutes = this._pad(date.getMinutes());
-      this._el.innerHTML = hours + this._delimiter + minutes;
+      this._el.innerHTML = day + <br>  + hours + this._delimiter + minutes;
     }
 
     _start() {
