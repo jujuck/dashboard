@@ -426,10 +426,12 @@
 
     _setTime() {
       const date = new Date();
-      const day = this._pad(date.getDays());
+      const year = this._pad(date.getFullYears());
+      const today = this._pad(date.getDate());
+      const day = this._pad(date.getDay());
       const hours = this._pad(date.getHours());
       const minutes = this._pad(date.getMinutes());
-      this._el.innerHTML = day + <br>  + hours + this._delimiter + minutes;
+      this._el.innerHTML = today + this._delimiter + day + this._delimiter + year + "<br>" + hours + this._delimiter + minutes;
     }
 
     _start() {
